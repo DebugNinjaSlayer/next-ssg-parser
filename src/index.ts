@@ -9,13 +9,9 @@ const {
 
 const nextContent = JSON.parse(content);
 
-const markdown = nodesToMarkdown(nextContent);
+const markdown = nodeToMarkdown(nextContent);
 
 fs.writeFileSync("output.md", markdown);
-
-function nodesToMarkdown(nodes: any[]): string {
-  return nodes.map(nodeToMarkdown).join("");
-}
 
 function nodeToMarkdown(node: any): string {
   if (typeof node === "string") {
