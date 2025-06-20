@@ -1,0 +1,20 @@
+{
+  "name": "next-ssg-parser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "DebugNinjaSlayer <8620373+DebugNinjaSlayer@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@types/node": "^24.0.3",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./bin/index.js",
+    "dev": "ts-node ./src/index.ts"
+  }
+}
