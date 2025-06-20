@@ -27,7 +27,9 @@ const {
 const nextContent = JSON.parse(content);
 
 const markdown = nodeToMarkdown(nextContent);
+const h1 = $("h1").first();
+const title = h1.contents().first().text();
 
-fs.writeFileSync("output.md", markdown);
+fs.writeFileSync("output.md", `# ${title}\n\n${markdown}`);
 
 console.log("done");
