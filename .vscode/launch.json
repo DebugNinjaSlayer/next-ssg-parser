@@ -12,7 +12,6 @@
       "runtimeArgs": ["--loader", "ts-node/esm"],
       "program": "${workspaceFolder}/src/index.ts",
       "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal",
       "sourceMaps": true,
       "args": []
     }
