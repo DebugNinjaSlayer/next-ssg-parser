@@ -1,8 +1,27 @@
 {
   "name": "next-ssg-parser",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "description": "A tool library for parsing Next.js SSG pages and converting them to Markdown",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "nextjs",
+    "ssg",
+    "markdown",
+    "parser",
+    "react",
+    "static-site-generation"
+  ],
   "author": "DebugNinjaSlayer <8620373+DebugNinjaSlayer@users.noreply.github.com>",
   "license": "MIT",
   "private": false,
@@ -18,6 +37,10 @@
   "scripts": {
     "build": "tsc",
     "start": "node ./bin/index.js",
-    "dev": "node --loader ts-node/esm ./src/index.ts"
+    "dev": "node --loader ts-node/esm ./src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
