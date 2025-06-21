@@ -35,7 +35,7 @@
     "ts-node": "^10.9.2"
   },
   "scripts": {
-    "prepare": "yarn build",
+    "prepare": "npm run build",
     "build": "tsc",
     "start": "node ./bin/index.js",
     "dev": "node --loader ts-node/esm ./src/index.ts",
